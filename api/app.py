@@ -1,5 +1,8 @@
 from fastapi import FastAPI
 from fastapi import HTTPException
+from fastapi import Depends
+
+from security.auth import verify_api_key
 from api.schema import (QuestionRequest)
 from api.rag_service import (RAGService)
 
@@ -19,7 +22,9 @@ def health():
     }
 
 @app.post("/store")
-def store_vector_db():
+def store_vector_db(
+    auth=Depends(verify_api_key)
+):
 
     try:
 
@@ -40,7 +45,8 @@ def store_vector_db():
     
 @app.post("/ask")
 def ask_question(
-    request: QuestionRequest
+    request: QuestionRequest,
+    auth=Depends(verify_api_key)
 ):
 
     try:
