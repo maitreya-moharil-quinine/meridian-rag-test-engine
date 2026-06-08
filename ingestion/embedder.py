@@ -3,8 +3,9 @@ from dotenv import load_dotenv
 from langchain_google_genai import GoogleGenerativeAIEmbeddings
 from pathlib import Path
 
-# Find the absolute path to the root folder (MERIDIAN)
-# This looks up 2 levels from embedder.py (ingestion/ -> MERIDIAN/)
+
+# __file__ Stores relative path of file Automatically
+# .resolve() Convert it into Absolute Path
 root_dir = Path(__file__).resolve().parent.parent
 env_path = root_dir / ".env"
 
@@ -25,7 +26,6 @@ def create_embeddings():
             "Please check that your .env file exists in the root folder."
         )
     
-    # 4. Explicitly pass the api_key to override Pydantic checks
     embeddings = GoogleGenerativeAIEmbeddings(
         model="gemini-embedding-2-preview",
         google_api_key=api_key  # Passing it explicitly resolves the validation error
