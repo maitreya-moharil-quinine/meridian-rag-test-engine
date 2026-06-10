@@ -35,13 +35,14 @@ PROMPT = PromptTemplate(
     input_variables=["context", "question"]
 )
 
-def generate_response(question: str, retrieved_docs: list):
-    """
-    Generate final answer using retrieved context.
-    """
-    context = "\n\n".join(doc.page_content for doc in retrieved_docs)
+def generate_response(question, retrieved_docs):
 
-    prompt = PROMPT.format(context=context, question=question)
-    response = LLM.invoke(prompt)
+    context = "\n\n".join(
+        doc.page_content
+        for doc in retrieved_docs
+    )
 
-    return response.content
+    print("Retrieved context length:", len(context))
+    print("Question:", question)
+
+    return "DEBUG: Retrieval completed successfully."
