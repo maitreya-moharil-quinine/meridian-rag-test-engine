@@ -1,13 +1,34 @@
-from langchain_huggingface import HuggingFaceEmbeddings
+import os
+from dotenv import load_dotenv
+from langchain_google_genai import GoogleGenerativeAIEmbeddings
+from pathlib import Path
+
+
+# __file__ Stores relative path of file Automatically
+# .resolve() Convert it into Absolute Path
+root_dir = Path(__file__).resolve().parent.parent
+env_path = root_dir / ".env"
+
+# Explicitly load the .env from the precise absolute path
+load_dotenv(dotenv_path=env_path)
 
 def create_embeddings():
     """
-    Create local embeddings using HuggingFace.
-    No Google API required.
+    Creates cloud-based Google GenAI embeddings using an explicit API key.
     """
-
-    embeddings = HuggingFaceEmbeddings(
-        model_name="sentence-transformers/all-MiniLM-L6-v2"
+    # 2. Fetch the key from the environment
+    api_key = os.environ.get("GOOGLE_API_KEY")
+    
+    # 3. Defensive check to catch configuration bugs early
+    if not api_key:
+        raise ValueError(
+            "CRITICAL: GOOGLE_API_KEY is missing from your environment. "
+            "Please check that your .env file exists in the root folder."
+        )
+    
+    embeddings = GoogleGenerativeAIEmbeddings(
+        model="gemini-embedding-2-preview",
+        google_api_key=api_key  # Passing it explicitly resolves the validation error
     )
-
+    
     return embeddings

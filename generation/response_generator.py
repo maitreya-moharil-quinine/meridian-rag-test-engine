@@ -8,7 +8,7 @@ google_api_key = os.environ.get("GOOGLE_API_KEY")
 
 # 1. Increased max_output_tokens and slightly bumped temperature
 LLM = ChatGoogleGenerativeAI(
-    model="gemini-2.0-flash",
+    model="gemini-2.5-flash",
     temperature=0.4,         
     max_output_tokens=2048   
 )

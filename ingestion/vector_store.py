@@ -5,16 +5,7 @@ def save_vector_store(vector_store):
     vector_store.save_local(
         "vector_DB"
     )
-
-
-def load_vector_store(embeddings):
-
-    return FAISS.load_local(
-        "vector_DB",
-        embeddings,
-        allow_dangerous_deserialization=True
-    )
-
+# def load_vector_store(embeddings)
 def store_vectors(chunks, embeddings):
     """
     Create FAISS vector store.

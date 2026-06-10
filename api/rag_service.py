@@ -174,6 +174,4 @@ class RAGService:
 
         return {
             "status": "healthy",
-            "knowledge_base_loaded":
-            self.retriever is not None
         }
