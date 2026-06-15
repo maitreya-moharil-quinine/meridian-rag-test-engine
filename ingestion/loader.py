@@ -5,7 +5,13 @@ from pypdf import PdfReader
 from docx import Document
 
 
-SUPPORTED_EXTENSIONS = {".txt", ".md", ".pdf", ".docx"}
+SUPPORTED_EXTENSIONS = {
+    ".txt",
+    ".md",
+    ".pdf",
+    ".docx"
+}
+
 
 def _extract_text(file_path: Path) -> str:
 
@@ -19,6 +25,7 @@ def _extract_text(file_path: Path) -> str:
 
     if suffix == ".pdf":
         reader = PdfReader(str(file_path))
+
         return "\n".join(
             page.extract_text() or ""
             for page in reader.pages
@@ -26,6 +33,7 @@ def _extract_text(file_path: Path) -> str:
 
     if suffix == ".docx":
         doc = Document(str(file_path))
+
         return "\n".join(
             paragraph.text
             for paragraph in doc.paragraphs
@@ -33,21 +41,34 @@ def _extract_text(file_path: Path) -> str:
 
     return ""
 
+
+def get_document_type(file_name: str) -> str:
+    """
+    Assign document category based on filename.
+    Used later for RBAC.
+    """
+
+    file_name = file_name.lower()
+
+    if "leave" in file_name:
+        return "leave_policy"
+
+    elif "salary" in file_name:
+        return "salary_data"
+
+    elif "employee" in file_name:
+        return "employee_data"
+
+    elif "hr" in file_name:
+        return "hr_document"
+
+    else:
+        return "company_policy"
+
+
 def load_documents(folder_path: str) -> List[Dict]:
     """
-    Load documents from a knowledge base folder.
-
-    Returns:
-        [
-            {
-                "content": "...",
-                "metadata": {
-                    "source": "knowledge_base/file.pdf",
-                    "file_name": "file.pdf",
-                    "file_type": ".pdf"
-                }
-            }
-        ]
+    Load documents from knowledge base.
     """
 
     documents = []
@@ -61,10 +82,15 @@ def load_documents(folder_path: str) -> List[Dict]:
             continue
 
         try:
+
             text = _extract_text(file_path)
 
             if not text.strip():
                 continue
+
+            document_type = get_document_type(
+                file_path.name
+            )
 
             documents.append(
                 {
@@ -73,11 +99,15 @@ def load_documents(folder_path: str) -> List[Dict]:
                         "source": str(file_path),
                         "file_name": file_path.name,
                         "file_type": file_path.suffix.lower(),
-                    },
+                        "document_type": document_type
+                    }
                 }
             )
 
         except Exception as e:
-            print(f"Failed to load {file_path}: {e}")
+
+            print(
+                f"Failed to load {file_path}: {e}"
+            )
 
     return documents

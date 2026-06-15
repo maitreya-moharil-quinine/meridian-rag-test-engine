@@ -1,6 +1,6 @@
 from fastapi import Header, HTTPException
 
-SECRET_API_KEY = "123456"
+SECRET_API_KEY = "1234567890"
 
 def verify_api_key(
     x_api_key: str = Header(None)
