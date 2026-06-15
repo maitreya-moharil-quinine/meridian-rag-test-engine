@@ -10,7 +10,7 @@ google_api_key = os.environ.get("GOOGLE_API_KEY")
 LLM = ChatGoogleGenerativeAI(
     model="gemini-2.5-flash",
     temperature=0.4,         
-    max_output_tokens=2048   
+    max_output_tokens=1024   
 )
 
 # 2. Re-engineered prompt with formatting guidance for rich generation
@@ -35,14 +35,25 @@ PROMPT = PromptTemplate(
     input_variables=["context", "question"]
 )
 
-def generate_response(question, retrieved_docs):
+# def generate_response(question, retrieved_docs):
 
-    context = "\n\n".join(
-        doc.page_content
-        for doc in retrieved_docs
-    )
+#     context = "\n\n".join(
+#         doc.page_content
+#         for doc in retrieved_docs
+#     )
 
-    print("Retrieved context length:", len(context))
-    print("Question:", question)
+#     print("Retrieved context length:", len(context))
+#     print("Question:", question)
 
-    return "DEBUG: Retrieval completed successfully."
+#     return "DEBUG: Retrieval completed successfully."
+
+def generate_response(question: str, retrieved_docs: list):
+    """
+    Generate final answer using retrieved context.
+    """
+    context = "\n\n".join(doc.page_content for doc in retrieved_docs)
+
+    prompt = PROMPT.format(context=context, question=question)
+    response = LLM.invoke(prompt)
+
+    return response.content

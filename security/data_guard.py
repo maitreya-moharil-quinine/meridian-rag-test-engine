@@ -1,12 +1,8 @@
 SENSITIVE_TERMS = [
     "api key",
-    "apikey",
     "password",
     "secret",
     "token",
-    "employee details",
-    "employee address",
-    "salary",
     "credentials"
 ]
 

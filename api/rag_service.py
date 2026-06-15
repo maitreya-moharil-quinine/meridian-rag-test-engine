@@ -29,25 +29,6 @@ class RAGService:
         self.vector_store = None
         self.retriever = None
 
-        try:
-
-            self.embeddings = create_embeddings()
-
-            self.vector_store = load_vector_store(
-                self.embeddings
-            )
-
-            self.retriever = build_retriever(
-                vector_store=self.vector_store,
-                llm=LLM
-            )
-
-            print("✅ Existing FAISS index loaded")
-
-        except Exception as e:
-
-            print("⚠️ No existing FAISS index found")
-            print(e)
 
     def store(self):
         """
@@ -120,25 +101,15 @@ class RAGService:
                 "Access denied: sensitive information request detected."
             )
 
-        docs = self.retriever.invoke(
-            question
-        )
+        docs = self.retriever.invoke(question)
 
-        # RBAC Filtering
-        filtered_docs = []
+        # Clean, single-line RBAC Filtering using the boolean check
+        filtered_docs = [
+            doc for doc in docs 
+            if has_access(role, doc.metadata.get("file_name"))
+        ]
 
-        for doc in docs:
-
-            document_type = doc.metadata.get(
-                "document_type",
-                "company_policy"
-            )
-
-            if has_access(
-                role,
-                document_type
-            ):
-                filtered_docs.append(doc)
+        print(f"Retrieved {len(filtered_docs)} authorized documents for role: {role}")
 
         if not filtered_docs:
 

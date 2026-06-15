@@ -23,39 +23,6 @@ def health():
         "vector_store_loaded": rag.retriever is not None
     }
 
-
-@app.post("/ask")
-def ask_question(
-    request: QuestionRequest,
-    http_request: Request,
-    api_key: str = Depends(verify_api_key)
-):
-
-    try:
-
-        client_ip = http_request.client.host
-
-        if is_rate_limited(client_ip):
-            raise HTTPException(
-                status_code=429,
-                detail="To many requests.Please try again later."
-            )
-        
-        return rag.ask(
-            request.question,
-            role="employee"
-        )
-
-    except Exception as e:
-        import traceback
-        traceback.print_exc()
-
-        raise HTTPException(
-            status_code=500,
-            detail=str(e)
-        )
-
-
 @app.post("/store")
 def store_vector_db(
     api_key: str = Depends(verify_api_key)
@@ -70,6 +37,36 @@ def store_vector_db(
             "message": "Knowledge Base Indexed Successfully",
             **result
         }
+
+    except Exception as e:
+        import traceback
+        traceback.print_exc()
+
+        raise HTTPException(
+            status_code=500,
+            detail=str(e)
+        )
+
+@app.post("/ask")
+def ask_question(
+    request: QuestionRequest,
+    http_request: Request,
+    api_key: str = Depends(verify_api_key)
+):
+
+    try:
+        client_ip = http_request.client.host
+
+        if is_rate_limited(client_ip):
+            raise HTTPException(
+                status_code=429,
+                detail="To many requests.Please try again later."
+            )
+        
+        return rag.ask(
+            request.question,
+            role="admin"
+        )
 
     except Exception as e:
         import traceback

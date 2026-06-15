@@ -1,10 +1,13 @@
 ROLE_PERMISSIONS = {
-    "admin": ["all"],
+    "admin": ["all"], 
     "employee": [
-        "leave_policy",
-        "company_policy"
+        "employee_handbook.txt",
+        "internal_security_policy.md",
+        "LLM & RAG Security.docx",
+        "product_roadmap.md"
     ],
     "guest": [
-        "company_policy"
+        "company_faq.md",
+        "customer_support_guide.txt"
     ]
 }
