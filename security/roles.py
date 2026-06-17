@@ -1,13 +1,21 @@
 ROLE_PERMISSIONS = {
-    "admin": ["all"], 
+    "admin": ["all"],
+
     "employee": [
-        "employee_handbook.txt",
-        "internal_security_policy.md",
-        "LLM & RAG Security.docx",
-        "product_roadmap.md"
+        "Employee_Handbook.txt",
+        "Customer_Complaint_Handling_Procedures.txt",
+        "KYC_Verification_Process.txt",
+        "IT_Security_Policy.txt",
+        "Incident_Response_Plan.txt",
+        "Policy_Update_Refund_Procedures_v2.3.txt"
     ],
+
     "guest": [
-        "company_faq.md",
-        "customer_support_guide.txt"
+        "Meridian_Financial_Services_Overview.txt",
+        "Savings_Account_Product_Guide.txt",
+        "Frequently_Asked_Questions.txt",
+        "Refund_and_Cancellation_Policy.txt",
+        "General_Terms_and_Conditions.txt",
+        "Fee_Schedule_2026.txt"
     ]
 }
