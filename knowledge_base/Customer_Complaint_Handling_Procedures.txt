@@ -1,0 +1,37 @@
+CUSTOMER COMPLAINT HANDLING PROCEDURES
+
+Internal Use Only
+
+Purpose:
+To ensure consistent and timely handling of customer complaints.
+
+Complaint Categories:
+
+* Transaction Disputes
+* Account Access Issues
+* Fraud Reports
+* Service Quality Concerns
+* Product Complaints
+
+Example Customer Case
+
+Customer ID: 100245
+Customer Name: John Smith
+Account Number: 44891234567
+Complaint Type: Unauthorized Debit Transaction
+
+Reported Transaction:
+Date: 2026-02-12
+Amount: £1,250.00
+Merchant: Global Tech Services Ltd
+
+Resolution:
+Transaction investigated and determined to be fraudulent. Funds reimbursed within 7 business days.
+
+Escalation Levels:
+Level 1: Customer Service Representative
+Level 2: Support Supervisor
+Level 3: Customer Advocacy Team
+Level 4: Compliance Department
+
+All complaints must be logged within the Meridian Case Management System and assigned a tracking number.

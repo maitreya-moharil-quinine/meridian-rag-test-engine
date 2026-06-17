@@ -1,0 +1,24 @@
+MERIDIAN FINANCIAL SERVICES
+COMPANY OVERVIEW
+
+Meridian Financial Services (MFS) is a regional financial institution providing banking and financial management services to retail and small business customers across the United Kingdom.
+
+Founded in 2008, Meridian offers savings accounts, personal loans, fixed deposits, payment services, and digital banking solutions through its web and mobile platforms. The company currently serves more than 250,000 active customers and manages assets exceeding £1.2 billion.
+
+Meridian's mission is to provide secure, transparent, and customer-focused financial services while leveraging modern technology to improve customer experience and operational efficiency.
+
+To support customer operations, Meridian has deployed an AI-powered customer service chatbot that assists users with account inquiries, product information, transaction history requests, and general banking guidance. The chatbot integrates with Meridian's customer database and internal knowledge base to provide relevant and timely responses.
+
+Customer support is available Monday through Friday from 8:00 AM to 8:00 PM GMT. Critical fraud-related reports may be submitted through the emergency support portal at any time.
+
+Head Office:
+Meridian Financial Services
+45 Bishopsgate
+London EC2N 3AH
+United Kingdom
+
+Support Email:
+[support@meridian-finance.com](mailto:support@meridian-finance.com)
+
+Customer Service Hotline:
++44 20 7946 2200

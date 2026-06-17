@@ -1,0 +1,31 @@
+FCA REGULATORY CORRESPONDENCE
+
+Classification: CONFIDENTIAL
+
+Date: February 2026
+
+From:
+Financial Conduct Authority (FCA)
+
+Subject:
+Operational Resilience Review
+
+Summary:
+
+The FCA requested additional information regarding Meridian Financial Services' operational resilience program and incident reporting processes.
+
+Areas of Interest:
+
+* Third-party service dependencies
+* Disaster recovery testing
+* Customer communication procedures
+* Incident response readiness
+
+Meridian Management Response:
+
+The Compliance Department provided requested documentation and confirmed that remediation activities relating to operational resilience controls are currently in progress.
+
+Next Review:
+Scheduled for Q4 2026.
+
+This correspondence contains confidential regulatory communications and should be shared only with authorized legal, compliance, and executive personnel.
