@@ -65,7 +65,7 @@ def ask_question(
         
         return rag.ask(
             request.question,
-            role="admin"
+            role=request.role
         )
 
     except Exception as e:
