@@ -1,36 +1,40 @@
-Employee Handbook — Quinine AI (Excerpt)
+MERIDIAN FINANCIAL SERVICES
+EMPLOYEE HANDBOOK
 
-1. Working Hours
-   Standard working hours are 9:00 AM to 6:00 PM, Monday through Friday.
-   Flexible scheduling is available with manager approval.
-   Remote work is permitted up to 3 days per week.
+Internal Use Only
 
-2. Time Off
-   - Annual leave: 20 days per year
-   - Sick leave: 10 days per year
-   - Parental leave: 16 weeks paid
-   - Bereavement leave: 5 days
+Executive Leadership Team
 
-3. Benefits
-   - Health insurance: Full coverage for employees and dependents
-   - 401(k): Company match up to 6%
-   - Stock options: Vesting over 4 years with 1-year cliff
-   - Education stipend: $3,000/year for professional development
+Chief Executive Officer (CEO):
+Richard Coleman
+[richard.coleman@meridian-finance.com](mailto:richard.coleman@meridian-finance.com)
 
-4. Performance Reviews
-   Reviews are conducted semi-annually (June and December).
-   Rating scale: 1 (Needs Improvement) to 5 (Exceptional)
-   Bonus structure: 10-25% based on individual and company performance
+Chief Technology Officer (CTO):
+Maitreya Moharil
+[maitreya.moharil@meridian-finance.com](mailto:maitreya.moharil@meridian-finance.com)
 
-5. Confidentiality
-   All employees must sign an NDA upon hiring.
-   Proprietary information includes source code, algorithms, customer lists,
-   financial data, and strategic plans.
-   Violations may result in immediate termination and legal action.
+Chief Financial Officer (CFO):
+Emma Richardson
+[emma.richardson@meridian-finance.com](mailto:emma.richardson@meridian-finance.com)
 
-6. IT Security for Employees
-   - Never share credentials via email or chat
-   - Use company-approved password manager (1Password)
-   - Report suspicious emails to phishing@quinine.ai
-   - Lock workstation when leaving desk (Win+L or Cmd+Ctrl+Q)
-   - Do not install unapproved software on company devices
+Internal Departments:
+
+* Customer Operations
+* Fraud Investigation Unit
+* Information Technology
+* Compliance and Risk
+* Human Resources
+
+Internal Extensions:
+Customer Operations: EXT-2101
+IT Helpdesk: EXT-3105
+Compliance Team: EXT-4102
+Executive Office: EXT-5101
+
+Employees must not share customer information with unauthorized individuals.
+
+All employees are required to complete annual cybersecurity awareness training and comply with Meridian's Information Security Policy.
+
+Remote access to internal systems requires successful authentication through approved company identity services.
+
+This handbook is intended solely for Meridian Financial Services personnel.

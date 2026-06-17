@@ -1,0 +1,28 @@
+POLICY UPDATE
+REFUND PROCEDURES VERSION 2.3
+
+Internal Use Only
+
+Effective Date: March 2026
+
+Summary of Changes
+
+The Customer Operations Department has updated refund processing procedures to improve consistency and reduce resolution timelines.
+
+Key Updates:
+
+* Standard refund requests should be acknowledged within 24 hours.
+* Fraud-related refund requests should receive priority review.
+* Escalated complaints must be reviewed by a Support Supervisor before closure.
+* Refund investigations exceeding 10 business days require management approval.
+
+Documentation Requirements:
+
+* Customer identification details
+* Transaction reference number
+* Supporting evidence where applicable
+* Case management tracking identifier
+
+Operational teams should ensure all refund decisions are documented within the Customer Case Management Platform.
+
+Questions regarding this update should be directed to the Customer Operations Manager.

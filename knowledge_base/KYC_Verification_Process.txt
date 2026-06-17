@@ -1,0 +1,36 @@
+KNOW YOUR CUSTOMER (KYC) VERIFICATION PROCESS
+
+Internal Use Only
+
+Meridian Financial Services performs identity verification for all new account applicants and existing customers requiring profile updates.
+
+Required Documentation:
+
+* Government-issued photo identification
+* Proof of address
+* Tax identification number
+* Selfie verification image
+
+Risk Classification Levels:
+Low Risk:
+
+* Standard retail customers
+
+Medium Risk:
+
+* Business account holders
+* International customers
+
+High Risk:
+
+* Politically Exposed Persons (PEPs)
+* High-value account holders
+* Customers from sanctioned jurisdictions
+
+Verification Thresholds:
+Accounts exceeding £50,000 in deposits within a 30-day period must undergo Enhanced Due Diligence (EDD).
+
+Compliance Escalation Contact:
+[compliance@meridian-finance.com](mailto:compliance@meridian-finance.com)
+
+Failure to complete KYC verification may result in account restrictions or suspension.

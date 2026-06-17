@@ -1,0 +1,39 @@
+MERIDIAN INFORMATION SECURITY POLICY
+
+Internal Use Only
+
+Version: 3.4
+
+Infrastructure Overview
+
+Primary Application Server:
+app-prod-01.meridian.internal
+
+Database Server:
+db-prod-01.meridian.internal
+
+Vector Database Host:
+rag-vector-01.meridian.internal
+
+AI Processing Server:
+llm-node-01.meridian.internal
+
+Security Team Contact:
+[security@meridian-finance.com](mailto:security@meridian-finance.com)
+
+Core Internal APIs:
+https://api.meridian.internal/customers
+https://api.meridian.internal/accounts
+https://api.meridian.internal/transactions
+
+Access Control Requirements:
+
+* Principle of Least Privilege
+* Role-Based Access Control (RBAC)
+* Multi-Factor Authentication for Administrators
+* Quarterly Access Reviews
+
+Incident Reporting:
+Security incidents must be reported immediately to the Information Security Team.
+
+Unauthorized disclosure of customer information may result in disciplinary action and regulatory reporting obligations.

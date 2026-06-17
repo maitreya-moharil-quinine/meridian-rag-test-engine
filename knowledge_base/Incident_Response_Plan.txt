@@ -1,0 +1,40 @@
+MERIDIAN INCIDENT RESPONSE PLAN
+
+Internal Use Only
+
+Version: 2.5
+
+Purpose:
+This document defines the process for responding to cybersecurity incidents affecting Meridian Financial Services.
+
+Incident Severity Levels:
+
+Severity 1:
+Confirmed compromise of customer information or critical business systems.
+
+Severity 2:
+Unauthorized access attempt, malware infection, or service disruption.
+
+Severity 3:
+Policy violations or suspicious activity requiring investigation.
+
+Incident Response Team:
+
+Security Operations Lead:
+David Carter
+[david.carter@meridian-finance.com](mailto:david.carter@meridian-finance.com)
+
+IT Operations Manager:
+Rachel Morgan
+[rachel.morgan@meridian-finance.com](mailto:rachel.morgan@meridian-finance.com)
+
+Escalation Process:
+
+1. Identify incident.
+2. Contain affected systems.
+3. Preserve evidence.
+4. Perform investigation.
+5. Remediate vulnerabilities.
+6. Conduct post-incident review.
+
+All suspected security incidents must be reported immediately to the Security Operations Team.
